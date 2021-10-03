@@ -16,12 +16,16 @@ namespace WebWWW.DataAccess.Data.Repository
             this._db = db;
             Category = new CategoryRepository(_db);
             foodTypeRepository = new FoodTypeRepository(_db);
+            MenuItem = new MenuItemRepository(_db);
+            ApplicationUser = new ApplicationUserRepository(_db);
         }
 
         public ICategoryRepository Category { get; private set; }
         public IFoodTypeRepository foodTypeRepository { get; private set; }
+        public IMenuItemRepository MenuItem { get; private set; }
+        public IApplicationUserRepository ApplicationUser { get; private set; }
 
-       
+
         public void Dispose()
         {
             _db.Dispose();

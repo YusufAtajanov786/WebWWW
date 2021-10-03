@@ -10,6 +10,8 @@ namespace WebWWW.DataAccess.Data.Repository.IRepository
     {
         ICategoryRepository Category { get; }
         IFoodTypeRepository foodTypeRepository { get; }
+        IMenuItemRepository MenuItem { get; }
+        IApplicationUserRepository ApplicationUser { get; }
         void Save();
     }
 }

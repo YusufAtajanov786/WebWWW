@@ -1,15 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebWWW.DataAccess.Data.Repository.IRepository;
+using WebWWW.Utility;
 
 namespace WebWWW.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+   
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

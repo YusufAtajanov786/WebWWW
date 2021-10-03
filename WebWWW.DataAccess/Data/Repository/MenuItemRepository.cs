@@ -28,7 +28,10 @@ namespace WebWWW.DataAccess.Data.Repository
             objFromDb.CategoryId = menuItem.CategoryId;
             objFromDb.FoodTypeId = menuItem.FoodTypeId;
             objFromDb.Price = menuItem.Price;
-
+            if(objFromDb.Image != null)
+            {
+                objFromDb.Image = menuItem.Image;
+            }
             _db.SaveChanges();
         }
     }

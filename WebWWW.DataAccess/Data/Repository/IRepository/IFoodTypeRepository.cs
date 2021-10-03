@@ -10,7 +10,7 @@ namespace WebWWW.DataAccess.Data.Repository.IRepository
 {
     public interface IFoodTypeRepository:IRepository<FoodType>
     {
-        IEnumerable<SelectListItem> GetCategoryListForDropDown();
+        IEnumerable<SelectListItem> GetFoodTypeListForDropDown();
         void Update( FoodType foodType);
     }
 }
